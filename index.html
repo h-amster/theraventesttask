@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Document</title><style>body {
+        margin: 0;
+        padding: 0;
+        background-color: #fbf6f3;
+      }
+
+      .preloader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .preloader::after {
+        content: '';
+        display: inline-block;
+        border: 5px solid #803308;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }</style><script defer="defer" src="bundle.js"></script><link href="main.css" rel="stylesheet"></head><body><div id="root"><div class="preloader"></div></div></body></html>
