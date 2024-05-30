@@ -1,0 +1,44 @@
+.header {
+  color: $color-bg-accent;
+  background-color: $color-primary;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 24px 28px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 86px;
+  }
+
+  &__currency-block {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__currency-btn {
+    border: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: gray;
+    background-color: transparent;
+    transition: color $effectDuration;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-bg-accent;
+      color: $color-bg;
+    }
+
+    &:disabled {
+      color: $color-bg;
+      cursor: default;
+    }
+  }
+}

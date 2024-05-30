@@ -1,0 +1,53 @@
+%underline {
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform $effectDuration;
+  }
+
+  &:hover::after {
+    transform: scale(1);
+  }
+}
+
+%button {
+  border: 1px solid $color-primary;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: max-content;
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  color: $color-bg-accent;
+  background-color: $color-primary;
+  transition: box-shadow $effectDuration;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba(33, 9, 1, 0.16);
+  }
+
+  &:active {
+    color: #d3c5be;
+  }
+}
+
+%title {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: $color-primary;
+}

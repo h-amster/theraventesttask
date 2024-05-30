@@ -1,0 +1,16 @@
+.homepage {
+  &__container {
+    padding-block: 50px;
+  }
+
+  &__cards {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  &__card {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,36 @@
+/* stylelint-disable font-family-name-quotes */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $font-family;
+  background-color: $color-bg;
+
+  &__main {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  &--locked {
+    overflow: hidden;
+  }
+}
+
+.locked {
+  overflow: hidden;
+}
+
+html {
+  font-family: $font-family;
+  line-height: 1.2;
+}
+
+@include font-face(Montserrat, Montserrat-Medium, 500, normal);
+@include font-face(Montserrat, Montserrat-Bold, 700, normal);
+@include font-face(Montserrat, Montserrat-ExtraBold, 800, normal);

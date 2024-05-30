@@ -1,0 +1,109 @@
+.cartpage {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-block: 40px;
+  }
+
+  &__content {
+    grid-column: 1 / 5;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 30px;
+  }
+
+  &__total {
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: underline;
+    color: $color-text;
+  }
+
+  &__form-wrapper {
+    position: relative;
+    grid-column: 5 / -1;
+  }
+
+  &__form-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  &__form {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  &__form-label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__input-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &__input-error {
+    font-size: 10px;
+    color: red;
+  }
+
+  &__input {
+    border: 1px solid #d3c5be;
+    border-radius: 4px;
+    padding: 10px 20px;
+    max-width: 338px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-text;
+    background-color: transparent;
+    transition: border $effectDuration;
+
+    &::placeholder {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 16px;
+      color: #d3c5be;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+
+    @extend %button;
+  }
+
+  &__modal-btn {
+    display: block;
+    margin: 0 auto 30px;
+
+    @extend %button;
+  }
+
+  &__modal-important {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+}
